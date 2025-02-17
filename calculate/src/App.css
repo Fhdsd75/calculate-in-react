@@ -1,42 +1,112 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+body {
+  background-color: black;
+  color: white;
+  display: flex; /* Добавляем Flexbox */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  height: 100vh; /* Высота страницы */
+  margin: 0; /* Убираем отступы */
+}
+
+.calculator-container {
+  max-width: 600px;
   padding: 2rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.8), 0 0 30px rgba(127, 0, 255, 0.6);
+}
+
+h1 {
   text-align: center;
+  color: #ff69b4;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.input-group {
+  margin-bottom: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #dcdcdc;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ff69b4;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+input:focus {
+  outline: none;
+  border-color: #ff1493;
+  box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493;
 }
 
-.read-the-docs {
-  color: #888;
+.error-input {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px #ff4500;
+}
+
+.error-message {
+  color: #ff4500;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #9400d3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #9400d3, 0 0 20px #9400d3;
+}
+
+.calculate-btn:hover {
+  background: #8a2be2;
+  box-shadow: 0 0 15px #8a2be2, 0 0 25px #8a2be2;
+}
+
+.results-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.result-item span {
+  font-weight: 600;
+  color: #dcdcdc;
+}
+
+.result-item input {
+  width: 200px;
+  background: #2a2a2a;
+  border-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
 }
